@@ -1,0 +1,9 @@
+com/crauwjo/application/common/ElasticsearchConfiguration.class
+com/crauwjo/persistence/RecipeRepository.class
+com/crauwjo/rest/PopulateResource.class
+com/crauwjo/domain/RecipeJsonResponse.class
+com/crauwjo/domain/recipe/Recipe.class
+com/crauwjo/application_api/recipe/PopulateRecipeInterface.class
+com/crauwjo/application/recipe/PopulateRecipeUseCase.class
+com/crauwjo/domain/ingredient/Ingredient.class
+com/crauwjo/Application.class

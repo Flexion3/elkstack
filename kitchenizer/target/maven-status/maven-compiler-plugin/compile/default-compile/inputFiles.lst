@@ -1,0 +1,10 @@
+/Users/jonascrauwels/dev/git/elkstack/kitchenizer/src/main/java/com/crauwjo/application/recipe/PopulateRecipeUseCase.java
+/Users/jonascrauwels/dev/git/elkstack/kitchenizer/src/main/java/com/crauwjo/ingredient/Ingredient.java
+/Users/jonascrauwels/dev/git/elkstack/kitchenizer/src/main/java/com/crauwjo/application/common/ElasticsearchConfiguration.java
+/Users/jonascrauwels/dev/git/elkstack/kitchenizer/src/main/java/com/crauwjo/application/common/Config.java
+/Users/jonascrauwels/dev/git/elkstack/kitchenizer/src/main/java/com/crauwjo/Application.java
+/Users/jonascrauwels/dev/git/elkstack/kitchenizer/src/main/java/com/crauwjo/recipe/Recipe.java
+/Users/jonascrauwels/dev/git/elkstack/kitchenizer/src/main/java/com/crauwjo/domain/RecipeJsonResponse.java
+/Users/jonascrauwels/dev/git/elkstack/kitchenizer/src/main/java/com/crauwjo/application_api/recipe/PopulateRecipeInterface.java
+/Users/jonascrauwels/dev/git/elkstack/kitchenizer/src/main/java/com/crauwjo/rest/PopulateResource.java
+/Users/jonascrauwels/dev/git/elkstack/kitchenizer/src/main/java/com/crauwjo/persistence/RecipeRepository.java

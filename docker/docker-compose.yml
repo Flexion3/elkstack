@@ -1,34 +1,50 @@
 version: "3"
 services:
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:5.6.4
+    image: docker.elastic.co/elasticsearch/elasticsearch:5.5.0
     container_name: jonaselasticsearch
     restart: always
     ports:
-      - "39200:9200"
-      - "39300:9300"
+      - "9200:9200"
+      - "9300:9300"
     environment:
       - CLUSTER_NAME=jonaselasticsearchcluster
       - NODE_NAME=elasticsearch1
       - CORS_ENABLED = true
-      - XPACK_GRAPH_ENABLED=false
-      - XPACK_MONITORING_ENABLED=false
-      - XPACK_REPORTING_ENABLED=false
-      - XPACK_SECURITY_ENABLED=false
+      - XPACK_GRAPH_ENABLED=true
+      - XPACK_MONITORING_ENABLED=true
+      - XPACK_REPORTING_ENABLED=true
+      - XPACK_SECURITY_ENABLED=true
     networks:
       - elkstack
+    volumes:
+      - ./data/elasticsearch:/usr/share/elasticsearch/data
+
+  logstash:
+    image: logstash:latest
+    container_name: jonaslogstash
+    environment:
+      - CONFIG_PATH=/usr/share/logstash/config/logstash.conf
+    ports:
+      - "5044:5044"
+      - "9600:9600"
+    networks:
+      - elkstack
+    volumes:
+      - ./data/logstash/config:/usr/share/logstash/config
+      - ./data/logstash/pipeline:/usr/share/logstash/pipeline
 
   kibana:
     image: crauwjo/elkstack:kibana1.0
     container_name: jonaskibana
     restart: always
     ports:
-      - "35601:5601"
+      - "5601:5601"
     environment:
-      - XPACK_GRAPH_ENABLED=false
-      - XPACK_MONITORING_ENABLED=false
-      - XPACK_REPORTING_ENABLED=false
-      - XPACK_SECURITY_ENABLED=false
+      - XPACK_GRAPH_ENABLED=true
+      - XPACK_MONITORING_ENABLED=true
+      - XPACK_REPORTING_ENABLED=true
+      - XPACK_SECURITY_ENABLED=true
     networks:
       - elkstack
 
